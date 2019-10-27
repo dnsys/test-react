@@ -26,6 +26,9 @@ class Sidebar extends Component {
                                 <span className="sidebar__details-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></span> <span>Lisbon, Portugal</span>
                             </div>
                         </div>
+                        <div className="sidebar__caption">
+                            Local Meetup for Entrepreneurs
+                        </div>
                     </div>
                 </div>
                 {this.props.children}
