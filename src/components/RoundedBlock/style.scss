@@ -5,4 +5,9 @@
     padding: 25px;
     background: #ffffff;
     min-height: 100%;
+
+    &--panel {
+        min-height: 550px;
+        max-height: 100%;
+    }
 }

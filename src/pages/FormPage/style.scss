@@ -1,7 +1,10 @@
+@import "../../scss/variables";
+
 .form-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #FBFCFD;
+    background-color: $color-background;
+    padding: 50px 0;
 }
