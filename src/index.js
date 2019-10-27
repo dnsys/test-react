@@ -7,6 +7,9 @@ import * as serviceWorker from './serviceWorker';
 //bootstrap include
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//import app styles
+import './scss/index.scss';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
