@@ -11,7 +11,7 @@ class DatePicker extends Component{
         selected: null,
         availableDates: [
             {
-                dayLabel: '',
+                dayLabel: 'Friday, October 25',
                 day: 25,
                 time: [
                     '10:00',
@@ -20,7 +20,7 @@ class DatePicker extends Component{
                 ]
             },
             {
-                dayLabel: '',
+                dayLabel: 'Monday, October 28',
                 day: 28,
                 time: [
                     '11:00',
@@ -30,7 +30,7 @@ class DatePicker extends Component{
                 ]
             },
             {
-                dayLabel: '',
+                dayLabel: 'Tuesday, October 29',
                 day: 29,
                 time: [
                     '10:00'

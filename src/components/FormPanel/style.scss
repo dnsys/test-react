@@ -19,6 +19,14 @@
     &__timepicker {
         width: 40%;
         flex: 0 0 40%;
-        padding-left: 30px;
+        padding-left: 35px;
+    }
+
+    &__timepicker-row {
+        margin-bottom: 10px;
+    }
+
+    &__timepicker-label {
+        margin-bottom: 20px;
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {DatePicker} from '../../components/DatePicker';
+import {Button} from '../../components/Button';
 
 class FormPanel extends Component{
     constructor(props) {
@@ -9,24 +10,27 @@ class FormPanel extends Component{
     }
 
     state = {
-        selectedDay: null
+        selectedDayTime: null,
+        selectedDayLabel: ''
     };
 
     setSelectedDay(selectedDay) {
         this.setState({
-            selectedDay
+            selectedDayTime: selectedDay.time,
+            selectedDayLabel: selectedDay.dayLabel
         });
-
-        this.renderTime();
+        console.log(selectedDay);
     }
 
     renderTime() {
         let time = [];
 
-        if(this.state.selectedDay) {
-            this.state.selectedDay.time.forEach((item, index) => {
+        if(this.state.selectedDayTime) {
+            this.state.selectedDayTime.forEach((item, index) => {
                 time.push(
-                    <div key={index}>{item}</div>
+                    <div className="form-block__timepicker-row" key={index}>
+                        <Button>{item}</Button>
+                    </div>
                 )
             });
         }
@@ -45,6 +49,9 @@ class FormPanel extends Component{
                         <DatePicker change={this.setSelectedDay}/>
                     </div>
                     <div className="form-block__timepicker">
+                        <div className="form-block__timepicker-label">
+                            {this.state.selectedDayLabel}
+                        </div>
                         { this.renderTime() }
                     </div>
                 </div>
