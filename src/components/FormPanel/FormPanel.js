@@ -4,7 +4,9 @@ class FormPanel extends Component{
     render() {
         return (
             <div className="form-block">
-                { this.props.children }
+                <div className="form-block__heading">
+                    Select a Date & Time
+                </div>
             </div>
         );
     }

@@ -26,9 +26,7 @@ class FormPage extends Component{
                         </Col>
                         <Col md={8}>
                             <RoundedBlock>
-                                <FormPanel>
-                                    Col md 8
-                                </FormPanel>
+                                <FormPanel/>
                             </RoundedBlock>
                         </Col>
                     </Row>

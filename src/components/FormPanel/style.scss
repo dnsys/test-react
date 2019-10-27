@@ -1,2 +1,6 @@
 .form-block {
+    &__heading {
+        @include font-size(20px);
+        font-weight: 600;
+    }
 }
