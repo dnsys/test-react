@@ -7,7 +7,7 @@ import {
 
 import {RoundedBlock} from '../../components/RoundedBlock/index';
 import {Sidebar} from '../../components/Sidebar/index';
-import {Form} from '../../components/Form/index';
+import {FormPanel} from '../../components/FormPanel/index';
 
 import './style.scss';
 
@@ -26,9 +26,9 @@ class FormPage extends Component{
                         </Col>
                         <Col md={8}>
                             <RoundedBlock>
-                                <Form>
+                                <FormPanel>
                                     Col md 8
-                                </Form>
+                                </FormPanel>
                             </RoundedBlock>
                         </Col>
                     </Row>

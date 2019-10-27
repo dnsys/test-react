@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Form extends Component{
+class FormPanel extends Component{
     render() {
         return (
             <div className="form-block">
@@ -10,4 +10,4 @@ class Form extends Component{
     }
 }
 
-export default Form;
+export default FormPanel;
