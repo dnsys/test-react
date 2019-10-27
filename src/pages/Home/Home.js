@@ -24,8 +24,7 @@ class Home extends Component{
                        </div>
 
                        <div className="home__description">
-                           Hello! This is a simple test case of react app to improve knowledges and open the world of react. <br/>
-                           Press button to switch to the form.
+                           Hello! I am a test case built using the basic structure of the ReactJS. <br/> To open the case, you must click the button below.
                        </div>
                        <div className="mt-5">
                            <Button variant="info" onClick={() => this.goToApp('/form')}>Let's go</Button>
