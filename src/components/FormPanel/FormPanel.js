@@ -52,7 +52,11 @@ class FormPanel extends Component{
                         <div className="form-block__timepicker-label">
                             {this.state.selectedDayLabel}
                         </div>
-                        { this.renderTime() }
+                        <div className="form-block__timepicker-list">
+                            <div className="form-block__timepicker-list-inner">
+                                { this.renderTime() }
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

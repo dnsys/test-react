@@ -17,7 +17,7 @@ class FormPage extends Component{
                             </RoundedBlock>
                         </div>
                         <div className="l-col l-col-md-8">
-                            <RoundedBlock>
+                            <RoundedBlock className="rounded-block--panel">
                                 <FormPanel/>
                             </RoundedBlock>
                         </div>

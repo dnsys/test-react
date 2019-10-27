@@ -1,6 +1,10 @@
 @import "../../scss/mixins/font-size";
 
 .form-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     &__heading {
         @include font-size(20);
         font-weight: 600;
@@ -9,6 +13,7 @@
 
     &__container {
         display: flex;
+        flex: 1;
     }
 
     &__datepicker {
@@ -20,6 +25,8 @@
         width: 40%;
         flex: 0 0 40%;
         padding-left: 35px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__timepicker-row {
@@ -28,5 +35,21 @@
 
     &__timepicker-label {
         margin-bottom: 20px;
+    }
+
+    &__timepicker-list {
+        flex: 1;
+        overflow: auto;
+        position: relative;
+        margin-right: -25px;
+        margin-bottom: -25px;
+    }
+
+    &__timepicker-list-inner {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-right: 25px;
     }
 }
