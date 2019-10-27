@@ -6,8 +6,6 @@ import {
     Route
 } from 'react-router-dom';
 
-import logo from './logo.svg';
-
 //import component pages
 import { Home, FormPage } from './pages/index';
 
