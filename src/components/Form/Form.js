@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Form extends Component{
     render() {
         return (
-            <div>Hello! I'm Form component!</div>
+            <div className="form-block">
+                { this.props.children }
+            </div>
         );
     }
 }

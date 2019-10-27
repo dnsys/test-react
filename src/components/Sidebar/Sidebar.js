@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Sidebar extends Component {
     render() {
         return (
-            <div>Hello! I'm sidebar component!</div>
+            <div className="sidebar">
+                {this.props.children}
+            </div>
         );
     }
 }

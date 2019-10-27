@@ -4,6 +4,10 @@ import {
     Row,
     Col
 } from 'react-bootstrap';
+
+import {Sidebar} from '../../components/Sidebar/index';
+import {Form} from '../../components/Form/index';
+
 import './style.scss';
 
 class FormPage extends Component{
@@ -13,10 +17,14 @@ class FormPage extends Component{
                 <Container>
                     <Row>
                         <Col md={4}>
-                            Col md 4
+                            <Sidebar>
+                                Col md 4
+                            </Sidebar>
                         </Col>
                         <Col md={8}>
-                            Col md 8
+                            <Form>
+                                Col md 8
+                            </Form>
                         </Col>
                     </Row>
                 </Container>
