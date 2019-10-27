@@ -5,6 +5,7 @@ import {
     Col
 } from 'react-bootstrap';
 
+import {RoundedBlock} from '../../components/RoundedBlock/index';
 import {Sidebar} from '../../components/Sidebar/index';
 import {Form} from '../../components/Form/index';
 
@@ -17,14 +18,18 @@ class FormPage extends Component{
                 <Container>
                     <Row>
                         <Col md={4}>
-                            <Sidebar>
-                                Col md 4
-                            </Sidebar>
+                            <RoundedBlock>
+                                <Sidebar>
+                                    Col md 4
+                                </Sidebar>
+                            </RoundedBlock>
                         </Col>
                         <Col md={8}>
-                            <Form>
-                                Col md 8
-                            </Form>
+                            <RoundedBlock>
+                                <Form>
+                                    Col md 8
+                                </Form>
+                            </RoundedBlock>
                         </Col>
                     </Row>
                 </Container>
