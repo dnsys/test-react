@@ -1,2 +1,4 @@
-import { Button } from 'Button';
-import 'style.scss';
+import './style.scss';
+import Button from './Button';
+
+export {Button};

@@ -2,6 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//import components
+import {Button} from './components/Button/index';
+import {Calendar} from './components/Calendar/index';
+import {Form} from './components/Form/index';
+import {Sidebar} from './components/Sidebar/index';
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +25,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <Button></Button>
+        <Calendar></Calendar>
+        <Form></Form>
+        <Sidebar></Sidebar>
     </div>
   );
 }

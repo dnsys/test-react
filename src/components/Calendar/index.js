@@ -1,2 +1,4 @@
-import { Calendar } from 'Calendar';
-import 'style.scss';
+import './style.scss';
+import Calendar from './Calendar';
+
+export { Calendar };

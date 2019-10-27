@@ -1,2 +1,4 @@
-import { Form } from 'Form';
-import 'style.scss';
+import './style.scss';
+import Form from './Form';
+
+export { Form };

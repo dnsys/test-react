@@ -1,2 +1,4 @@
-import { Sidebar } from 'Sidebar';
-import 'style.scss'
+import './style.scss'
+import Sidebar from './Sidebar';
+
+export { Sidebar };
