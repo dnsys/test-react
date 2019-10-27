@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-    Container,
-    Row,
-    Col
-} from 'react-bootstrap';
-
 import {RoundedBlock} from '../../components/RoundedBlock';
 import {Sidebar} from '../../components/Sidebar';
 import {FormPanel} from '../../components/FormPanel';
@@ -15,20 +9,20 @@ class FormPage extends Component{
     render() {
         return (
             <div className="form-page">
-                <Container>
-                    <Row>
-                        <Col md={4}>
+                <div className="l-container">
+                    <div className="l-container__row">
+                        <div className="l-col l-col-md-4">
                             <RoundedBlock className="rounded-block--panel">
                                 <Sidebar/>
                             </RoundedBlock>
-                        </Col>
-                        <Col md={8}>
+                        </div>
+                        <div className="l-col l-col-md-8">
                             <RoundedBlock>
                                 <FormPanel/>
                             </RoundedBlock>
-                        </Col>
-                    </Row>
-                </Container>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
