@@ -55,6 +55,21 @@
             background: none;
             border: 0;
             padding: 0;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+
+            &.is-free {
+                background-color: rgba(0, 162, 255, .05);
+                color: #00a2ff;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: rgba(0, 162, 255, .15);
+                }
+            }
         }
     }
 }

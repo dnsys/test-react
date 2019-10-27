@@ -1,6 +1,53 @@
 import React, {Component} from 'react';
 
 class DatePicker extends Component{
+    constructor(props) {
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    state = {
+        selected: null,
+        availableDates: [
+            {
+                dayLabel: '',
+                day: 25,
+                time: [
+                    '10:00',
+                    '10:30',
+                    '15:30'
+                ]
+            },
+            {
+                dayLabel: '',
+                day: 28,
+                time: [
+                    '11:00',
+                    '12:30',
+                    '14:30',
+                    '16:00',
+                ]
+            },
+            {
+                dayLabel: '',
+                day: 29,
+                time: [
+                    '10:00'
+                ]
+            }
+        ]
+    };
+
+    handleChange(day) {
+        let selectedDay = this.state.availableDates.find(item => item.day === day);
+        this.setState({
+            selected: selectedDay
+        }, () => {
+            this.props.change(this.state.selected);
+        });
+    }
+
     render() {
         return (
             <div className="date-picker">
@@ -8,7 +55,7 @@ class DatePicker extends Component{
                     <div className="date-picker__date">
                         October 2019
                     </div>
-                    <div className="date-picker__month-switch">|</div>
+                    <div className="date-picker__month-switch"></div>
                 </div>
                 <div className="date-picker__calendar">
                     <div className="date-picker__calendar-head">
@@ -27,105 +74,105 @@ class DatePicker extends Component{
                             <div className="date-picker__calendar-cell"/>
                             <div className="date-picker__calendar-cell"/>
                             <div className="date-picker__calendar-cell">
-                                <button>1</button>
+                                <button disabled>1</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>2</button>
+                                <button disabled>2</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>3</button>
+                                <button disabled>3</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>4</button>
+                                <button disabled>4</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>5</button>
-                            </div>
-                        </div>
-                        <div className="date-picker__calendar-row">
-                            <div className="date-picker__calendar-cell">
-                                <button>6</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>7</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>8</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>9</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>10</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>11</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>12</button>
+                                <button disabled>5</button>
                             </div>
                         </div>
                         <div className="date-picker__calendar-row">
                             <div className="date-picker__calendar-cell">
-                                <button>13</button>
+                                <button disabled>6</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>14</button>
+                                <button disabled>7</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>15</button>
+                                <button disabled>8</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>16</button>
+                                <button disabled>9</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>17</button>
+                                <button disabled>10</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>18</button>
+                                <button disabled>11</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>19</button>
-                            </div>
-                        </div>
-                        <div className="date-picker__calendar-row">
-                            <div className="date-picker__calendar-cell">
-                                <button>20</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>21</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>22</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>23</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>24</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>25</button>
-                            </div>
-                            <div className="date-picker__calendar-cell">
-                                <button>26</button>
+                                <button disabled>12</button>
                             </div>
                         </div>
                         <div className="date-picker__calendar-row">
                             <div className="date-picker__calendar-cell">
-                                <button>27</button>
+                                <button disabled>13</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>28</button>
+                                <button disabled>14</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>29</button>
+                                <button disabled>15</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>30</button>
+                                <button disabled>16</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button>31</button>
+                                <button disabled>17</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>18</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>19</button>
+                            </div>
+                        </div>
+                        <div className="date-picker__calendar-row">
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>20</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>21</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>22</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>23</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>24</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button className="is-free" onClick={() => this.handleChange(25)}>25</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>26</button>
+                            </div>
+                        </div>
+                        <div className="date-picker__calendar-row">
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>27</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button className="is-free" onClick={() => this.handleChange(28)}>28</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button className="is-free" onClick={() => this.handleChange(29)}>29</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>30</button>
+                            </div>
+                            <div className="date-picker__calendar-cell">
+                                <button disabled>31</button>
                             </div>
                             <div className="date-picker__calendar-cell"/>
                             <div className="date-picker__calendar-cell"/>
