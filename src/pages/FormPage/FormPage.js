@@ -19,9 +19,7 @@ class FormPage extends Component{
                     <Row>
                         <Col md={4}>
                             <RoundedBlock className="rounded-block--panel">
-                                <Sidebar>
-                                    Col md 4
-                                </Sidebar>
+                                <Sidebar/>
                             </RoundedBlock>
                         </Col>
                         <Col md={8}>
