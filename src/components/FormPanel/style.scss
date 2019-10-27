@@ -5,4 +5,18 @@
         @include font-size(20);
         font-weight: 600;
     }
+
+    &__container {
+        display: flex;
+    }
+
+    &__datepicker {
+        width: 60%;
+        flex: 0 0 60%;
+    }
+
+    &__timepicker {
+        width: 40%;
+        flex: 0 0 40%;
+    }
 }
