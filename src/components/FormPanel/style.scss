@@ -1,6 +1,8 @@
+@import "../../scss/mixins/font-size";
+
 .form-block {
     &__heading {
-        @include font-size(20px);
+        @include font-size(20);
         font-weight: 600;
     }
 }
