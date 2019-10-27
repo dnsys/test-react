@@ -1,0 +1,60 @@
+@import '../../scss/mixins/font-size';
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__date {
+        font-weight: 300;
+    }
+
+    &__calendar {
+        display: table;
+        margin-left: -19px;
+        margin-right: -19px;
+    }
+
+    &__calendar-head {
+        display: table-header-group;
+    }
+
+    &__calendar-head-day {
+        @include font-size(12);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__calendar-body {
+        display: table-row-group;
+    }
+
+    &__calendar-row {
+        display: table-row;
+    }
+
+    &__calendar-cell {
+        display: table-cell;
+        text-align: center;
+
+        button {
+            display: block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 auto;
+            line-height: 45px;
+            background: none;
+            border: 0;
+            padding: 0;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 //import component pages
-import { Home, FormPage } from './pages/index';
+import { Home, FormPage } from './pages';
 
 const App = () => {
     return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {DatePicker} from '../../components/DatePicker';
 
 class FormPanel extends Component{
     render() {
@@ -9,7 +10,7 @@ class FormPanel extends Component{
                 </div>
                 <div className="form-block__container">
                     <div className="form-block__datepicker">
-
+                        <DatePicker/>
                     </div>
                 </div>
             </div>

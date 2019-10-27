@@ -5,9 +5,9 @@ import {
     Col
 } from 'react-bootstrap';
 
-import {RoundedBlock} from '../../components/RoundedBlock/index';
-import {Sidebar} from '../../components/Sidebar/index';
-import {FormPanel} from '../../components/FormPanel/index';
+import {RoundedBlock} from '../../components/RoundedBlock';
+import {Sidebar} from '../../components/Sidebar';
+import {FormPanel} from '../../components/FormPanel';
 
 import './style.scss';
 
