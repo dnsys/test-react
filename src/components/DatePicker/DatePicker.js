@@ -169,7 +169,7 @@ class DatePicker extends Component{
                                 <button disabled>24</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button className="is-free is-today" onClick={() => this.handleChange(25)}>25</button>
+                                <button className={`is-free is-today ${this.state.selected && this.state.selected.day === 25 ? 'is-selected' : ''}`} onClick={() => this.handleChange(25)}>25</button>
                             </div>
                             <div className="date-picker__calendar-cell">
                                 <button disabled>26</button>
@@ -180,10 +180,10 @@ class DatePicker extends Component{
                                 <button disabled>27</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button className="is-free" onClick={() => this.handleChange(28)}>28</button>
+                                <button className={`is-free ${this.state.selected && this.state.selected.day === 28 ? 'is-selected' : ''}`} onClick={() => this.handleChange(28)}>28</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button className="is-free" onClick={() => this.handleChange(29)}>29</button>
+                                <button className={`is-free ${this.state.selected && this.state.selected.day === 29 ? 'is-selected' : ''}`} onClick={() => this.handleChange(29)}>29</button>
                             </div>
                             <div className="date-picker__calendar-cell">
                                 <button disabled>30</button>

@@ -73,12 +73,12 @@
             }
 
             &.is-free {
-                background-color: rgba(0, 162, 255, .05);
+                background-color: rgba($azure-radiance, .05);
                 color: $azure-radiance;
                 font-weight: 600;
 
-                &:hover {
-                    background-color: rgba(0, 162, 255, .15);
+                &:not(.is-selected):hover {
+                    background-color: rgba($azure-radiance, .15);
                 }
             }
 
@@ -94,6 +94,11 @@
                     font-size: 34px;
                     font-weight: 400;
                 }
+            }
+
+            &.is-selected {
+                color: $catskill-white;
+                background: $azure-radiance;
             }
 
             @include max-w($screen-sm) {
