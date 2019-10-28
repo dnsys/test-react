@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faGlobeAmericas, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 class DatePicker extends Component{
     constructor(props) {
@@ -195,6 +195,17 @@ class DatePicker extends Component{
                             <div className="date-picker__calendar-cell"/>
                         </div>
                     </div>
+                </div>
+                <div className="date-picker__timezone">
+                    <button className="date-picker__timezone-btn">
+                        <span className="date-picker__timezone-btn-icon">
+                            <FontAwesomeIcon icon={faGlobeAmericas} />
+                        </span>
+                        UK, Ireland, Lisbon Time (09:43)
+                        <span className="date-picker__timezone-btn-caret">
+                            <FontAwesomeIcon icon={faCaretDown}/>
+                        </span>
+                    </button>
                 </div>
             </div>
         );

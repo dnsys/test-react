@@ -138,4 +138,38 @@
             color: rgba($abbey, .4);
         }
     }
+
+    &__timezone {
+        margin-top: 30px;
+    }
+
+    &__timezone-btn {
+        @include font-size(14);
+        border: 0;
+        background: none;
+        display: flex;
+        align-items: center;
+        padding: 9px;
+        border-radius: 18px;
+        font-weight: 400;
+        line-height: 14px;
+        transition: all .3s;
+
+        &:hover {
+            background: rgba($abbey, .2);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+
+    &__timezone-btn-icon {
+        margin-right: 10px;
+    }
+
+    &__timezone-btn-caret {
+        margin-left: 5px;
+    }
 }
