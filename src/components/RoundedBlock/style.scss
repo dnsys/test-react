@@ -17,7 +17,7 @@
     &--panel {
         min-height: 550px;
 
-        @include max-w($screen-sm) {
+        @include max-w($screen-md) {
             min-height: 0;
         }
     }
