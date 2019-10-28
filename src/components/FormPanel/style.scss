@@ -1,0 +1,76 @@
+@import "../../scss/mixins/font-size";
+@import "../../scss/mixins/media";
+@import "../../scss/variables";
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__heading {
+        @include font-size(20);
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex: 1;
+
+        @include max-w($screen-sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__datepicker {
+        width: 100%;
+
+        @include min-w($screen-sm) {
+            width: 60%;
+            flex: 0 0 60%;
+        }
+    }
+
+    &__timepicker {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        flex: 1;
+
+        @include min-w($screen-sm) {
+            padding-left: 35px;
+            width: 40%;
+            flex: 0 0 40%;
+            margin-top: 0;
+        }
+    }
+
+    &__timepicker-row {
+        margin-bottom: 10px;
+    }
+
+    &__timepicker-label {
+        margin-bottom: 20px;
+    }
+
+    &__timepicker-list {
+        flex: 1;
+        overflow: auto;
+        position: relative;
+        margin-right: -25px;
+        margin-bottom: -25px;
+    }
+
+    &__timepicker-list-inner {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-right: 25px;
+
+        @include max-w($screen-sm) {
+            position: static;
+        }
+    }
+}

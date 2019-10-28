@@ -1,0 +1,175 @@
+@import '../../scss/mixins/font-size';
+@import "../../scss/mixins/media";
+@import "../../scss/variables";
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__date {
+        font-weight: 300;
+    }
+
+    &__calendar {
+        display: table;
+        margin-left: -19px;
+        margin-right: -19px;
+
+        @include max-w($screen-sm) {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+    }
+
+    &__calendar-head {
+        display: table-header-group;
+    }
+
+    &__calendar-head-day {
+        @include font-size(12);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0;
+
+        @include max-w($screen-sm) {
+            @include font-size(10);
+        }
+    }
+
+    &__calendar-body {
+        display: table-row-group;
+    }
+
+    &__calendar-row {
+        display: table-row;
+    }
+
+    &__calendar-cell {
+        display: table-cell;
+        text-align: center;
+
+        button {
+            display: block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 auto;
+            line-height: 45px;
+            background: none;
+            border: 0;
+            padding: 0;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+
+            &.is-free {
+                background-color: rgba($azure-radiance, .05);
+                color: $azure-radiance;
+                font-weight: 600;
+
+                &:not(.is-selected):hover {
+                    background-color: rgba($azure-radiance, .15);
+                }
+            }
+
+            &.is-today {
+                position: relative;
+
+                &::after {
+                    content: '.';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    margin-left: -4px;
+                    font-size: 34px;
+                    font-weight: 400;
+                }
+            }
+
+            &.is-selected {
+                color: $catskill-white;
+                background: $azure-radiance;
+            }
+
+            @include max-w($screen-sm) {
+                @include font-size(12);
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &__switch-arrow {
+        @include font-size(14);
+        background: none;
+        border: none;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        line-height: 38px;
+        color: $primary-color;
+
+        &:not(:disabled):hover {
+            background: rgba($primary-color, .15);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        & + .date-picker__switch-arrow {
+            margin-left: 25px;
+        }
+
+        &:disabled {
+            color: rgba($abbey, .4);
+        }
+    }
+
+    &__timezone {
+        margin-top: 30px;
+    }
+
+    &__timezone-btn {
+        @include font-size(14);
+        border: 0;
+        background: none;
+        display: flex;
+        align-items: center;
+        padding: 9px;
+        border-radius: 18px;
+        font-weight: 400;
+        line-height: 14px;
+        transition: all .3s;
+
+        &:hover {
+            background: rgba($abbey, .2);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+
+    &__timezone-btn-icon {
+        margin-right: 10px;
+    }
+
+    &__timezone-btn-caret {
+        margin-left: 5px;
+    }
+}
