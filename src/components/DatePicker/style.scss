@@ -90,4 +90,33 @@
             }
         }
     }
+
+    &__switch-arrow {
+        @include font-size(14);
+        background: none;
+        border: none;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        line-height: 38px;
+        color: #00a2ff;
+
+        &:not(:disabled):hover {
+            background: rgba(#00a2ff, .15);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        & + .date-picker__switch-arrow {
+            margin-left: 15px;
+        }
+
+        &:disabled {
+            color: rgba(#4d5055, .4);
+        }
+    }
 }

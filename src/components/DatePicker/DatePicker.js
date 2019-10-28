@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 class DatePicker extends Component{
     constructor(props) {
@@ -63,7 +65,14 @@ class DatePicker extends Component{
                     <div className="date-picker__date">
                         October 2019
                     </div>
-                    <div className="date-picker__month-switch"></div>
+                    <div className="date-picker__month-switch">
+                        <button className="date-picker__switch-arrow" disabled>
+                            <FontAwesomeIcon icon={faChevronLeft} />
+                        </button>
+                        <button className="date-picker__switch-arrow">
+                            <FontAwesomeIcon icon={faChevronRight} />
+                        </button>
+                    </div>
                 </div>
                 <div className="date-picker__calendar">
                     <div className="date-picker__calendar-head">
