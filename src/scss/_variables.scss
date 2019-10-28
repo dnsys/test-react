@@ -15,9 +15,15 @@ $font-weight-black: 900;          // Black (Heavy)
 
 $font-weight-base: $font-weight-normal;
 
+//palette
+$catskill-white: #FBFCFD;
+$abbey: #4d5055;
+$azure-radiance: #00a2ff;
+
 // COLOR
-$color-background: #FBFCFD;
-$color-text-base: #4d5055;
+$primary-color: $azure-radiance;
+$color-background: $catskill-white;
+$color-text-base: $abbey;
 
 // FONT SIZE
 $line-height-base: 1.5;

@@ -74,7 +74,7 @@
 
             &.is-free {
                 background-color: rgba(0, 162, 255, .05);
-                color: #00a2ff;
+                color: $azure-radiance;
                 font-weight: 600;
 
                 &:hover {
@@ -100,10 +100,10 @@
         height: 38px;
         padding: 0;
         line-height: 38px;
-        color: #00a2ff;
+        color: $primary-color;
 
         &:not(:disabled):hover {
-            background: rgba(#00a2ff, .15);
+            background: rgba($primary-color, .15);
         }
 
         &:focus,
@@ -116,7 +116,7 @@
         }
 
         &:disabled {
-            color: rgba(#4d5055, .4);
+            color: rgba($abbey, .4);
         }
     }
 }

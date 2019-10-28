@@ -1,4 +1,5 @@
 @import '../../scss/mixins/font-size';
+@import '../../scss/variables';
 
 .sidebar {
     &__logo {
@@ -11,7 +12,7 @@
 
     &__sub-title {
         @include font-size(16);
-        color: rgba(#4d5055, .6);
+        color: rgba($abbey, .6);
         font-weight: 600;
         line-height: 24px;
         margin-bottom: 5px;
@@ -25,7 +26,7 @@
 
     &__details {
         margin-top: 15px;
-        color: rgba(#4d5055, .6);
+        color: rgba($abbey, .6);
     }
 
     &__details-row {
