@@ -169,7 +169,7 @@ class DatePicker extends Component{
                                 <button disabled>24</button>
                             </div>
                             <div className="date-picker__calendar-cell">
-                                <button className="is-free" onClick={() => this.handleChange(25)}>25</button>
+                                <button className="is-free is-today" onClick={() => this.handleChange(25)}>25</button>
                             </div>
                             <div className="date-picker__calendar-cell">
                                 <button disabled>26</button>

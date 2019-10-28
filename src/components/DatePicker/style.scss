@@ -82,6 +82,20 @@
                 }
             }
 
+            &.is-today {
+                position: relative;
+
+                &::after {
+                    content: '.';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    margin-left: -4px;
+                    font-size: 34px;
+                    font-weight: 400;
+                }
+            }
+
             @include max-w($screen-sm) {
                 @include font-size(12);
                 width: 30px;
