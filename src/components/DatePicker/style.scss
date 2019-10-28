@@ -1,4 +1,6 @@
 @import '../../scss/mixins/font-size';
+@import "../../scss/mixins/media";
+@import "../../scss/variables";
 
 .date-picker {
     display: flex;
@@ -20,6 +22,11 @@
         display: table;
         margin-left: -19px;
         margin-right: -19px;
+
+        @include max-w($screen-sm) {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
     }
 
     &__calendar-head {
@@ -31,6 +38,10 @@
         text-transform: uppercase;
         text-align: center;
         padding: 10px 0;
+
+        @include max-w($screen-sm) {
+            @include font-size(10);
+        }
     }
 
     &__calendar-body {
@@ -69,6 +80,13 @@
                 &:hover {
                     background-color: rgba(0, 162, 255, .15);
                 }
+            }
+
+            @include max-w($screen-sm) {
+                @include font-size(12);
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
             }
         }
     }

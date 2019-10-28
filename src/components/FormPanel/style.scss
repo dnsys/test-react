@@ -1,4 +1,6 @@
 @import "../../scss/mixins/font-size";
+@import "../../scss/mixins/media";
+@import "../../scss/variables";
 
 .form-block {
     display: flex;
@@ -14,19 +16,34 @@
     &__container {
         display: flex;
         flex: 1;
+
+        @include max-w($screen-sm) {
+            flex-direction: column;
+        }
     }
 
     &__datepicker {
-        width: 60%;
-        flex: 0 0 60%;
+        width: 100%;
+
+        @include min-w($screen-sm) {
+            width: 60%;
+            flex: 0 0 60%;
+        }
     }
 
     &__timepicker {
-        width: 40%;
-        flex: 0 0 40%;
-        padding-left: 35px;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        margin-top: 30px;
+        flex: 1;
+
+        @include min-w($screen-sm) {
+            padding-left: 35px;
+            width: 40%;
+            flex: 0 0 40%;
+            margin-top: 0;
+        }
     }
 
     &__timepicker-row {
@@ -51,5 +68,9 @@
         top: 0;
         left: 0;
         padding-right: 25px;
+
+        @include max-w($screen-sm) {
+            position: static;
+        }
     }
 }
