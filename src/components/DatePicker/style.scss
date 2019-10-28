@@ -93,6 +93,10 @@
                     margin-left: -4px;
                     font-size: 34px;
                     font-weight: 400;
+
+                    @include max-w($screen-sm) {
+                        bottom: 0;
+                    }
                 }
             }
 
