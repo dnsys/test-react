@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
 import {DatePicker} from '../../components/DatePicker';
 import {Button} from '../../components/Button';
 
@@ -7,11 +8,13 @@ class FormPanel extends Component{
         super(props);
 
         this.setSelectedDay = this.setSelectedDay.bind(this);
+        this.handleModal = this.handleModal.bind(this);
     }
 
     state = {
         selectedDayTime: null,
-        selectedDayLabel: ''
+        selectedDayLabel: '',
+        showModal: false
     };
 
     setSelectedDay(selectedDay) {
@@ -19,7 +22,13 @@ class FormPanel extends Component{
             selectedDayTime: selectedDay.time,
             selectedDayLabel: selectedDay.dayLabel
         });
-        console.log(selectedDay);
+    }
+
+    handleModal() {
+        console.log('handleModal');
+        this.setState({
+            showModal: !this.state.showModal
+        })
     }
 
     renderTime() {
@@ -28,7 +37,7 @@ class FormPanel extends Component{
         if(this.state.selectedDayTime) {
             this.state.selectedDayTime.forEach((item, index) => {
                 time.push(
-                    <div className="form-block__timepicker-row" key={index}>
+                    <div className="form-block__timepicker-row" key={index} onClick={this.handleModal}>
                         <Button>{item}</Button>
                     </div>
                 )
@@ -59,6 +68,19 @@ class FormPanel extends Component{
                         </div>
                     </div>
                 </div>
+                <Modal show={this.state.showModal} onHide={this.handleModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Book day</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        To book this day you need to have a <b>PRO</b> account. Just for $9999 per day.
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <ButtonBootstrap onClick={this.handleModal}>
+                            Close
+                        </ButtonBootstrap>
+                    </Modal.Footer>
+                </Modal>
             </div>
         );
     }
